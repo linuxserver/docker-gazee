@@ -51,7 +51,7 @@ http://192.168.x.x:8080 would show you what's running INSIDE the container on po
 * `-e PGID` for GroupID - see below for explanation
 * `-e PUID` for UserID - see below for explanation
 
-It is based on alpine linux with s6 overlay, for shell access whilst the container is running do `docker exec -it <container-name> /bin/bash`.
+It is based on alpine linux with s6 overlay, for shell access whilst the container is running do `docker exec -it gazee /bin/bash`.
 
 ### User / Group Identifiers
 
@@ -87,16 +87,16 @@ Happy Reading!
 
 ## Info
 
-* Shell access whilst the container is running: `docker exec -it <container-name> /bin/bash`
-* To monitor the logs of the container in realtime: `docker logs -f <container-name>`
+* Shell access whilst the container is running: `docker exec -it gazee /bin/bash`
+* To monitor the logs of the container in realtime: `docker logs -f gazee`
 
 * container version number 
 
-`docker inspect -f '{{ index .Config.Labels "build_version" }}' <container-name>`
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' gazee`
 
 * image version number
 
-`docker inspect -f '{{ index .Config.Labels "build_version" }}' <image-name>`
+`docker inspect -f '{{ index .Config.Labels "build_version" }}' linuxserver/gazee` 
 
 ## Versions
 
