@@ -17,6 +17,8 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 
 A WebApp Comic Reader for your favorite digital comics. Reach and read your comic library from any web connected device with a modern web browser.
 
+[![gazee](https://raw.githubusercontent.com/hubbcaps/gazee/master/public/images/logos/red/logo-red-yellow.png)][appurl]
+
 ## Usage
 
 ```
@@ -40,11 +42,11 @@ http://192.168.x.x:8080 would show you what's running INSIDE the container on po
 
 
 
-* `-p 4242` - the port
-* `-v /config` - Where the Gazee.db, Gazee.log, Application and other App data will live.
-* `-v /comics` - Where your comics exist on the host system.
-* `-v /mylar` - If you use Mylar, you can use the Mylar DB for metadata by mouting the folder it lives in here.
-* `-v /certs` - If you wish to use SSL Certs, mount the folder they live in here.
+* `-p 4242` - the port(s)
+* `-v /config` - Where Gazee should store config files.
+* `-v /comics` - Path to comics folder.
+* `-v /mylar` - Path to Mylar DB 
+* `-v /certs` - Where SSL certs should be stored. 
 * `-e PGID` for GroupID - see below for explanation
 * `-e PUID` for UserID - see below for explanation
 
@@ -63,7 +65,7 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 
 ## Setting up the application
 
-Go to **http://your-ip:4242**
+Webui can be found at `your-ip:4242`
 
   Default username and password for the web interface:
 
@@ -74,14 +76,13 @@ Click the gear icon to go to the settings page.
 
 Change the default admin password or add a new admin and remove the admin user altogether.
 
-Comic path will be the volume you mounted earlier
-
-`/comics`
+Comic path should be set to `/comics`
+*Optional* Mylar DB path should be set to `/mylar`
+*Optional* path for certificates and keys should be set to `/certs`
 
 After you update the settings, Gazee will restart and begin an intial scan of your comic library.
 
 Happy Reading!
-
 
 ## Info
 
