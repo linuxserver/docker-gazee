@@ -26,6 +26,7 @@ RUN \
 	python3-dev \
 	tiff-dev \
 	zlib-dev && \
+
 # install runtime packages
  apk add --no-cache \
 	curl \
@@ -46,6 +47,7 @@ RUN \
 	wget \
 	xz \
 	zlib && \
+
 # install gazee
  git clone --depth 1 https://github.com/hubbcaps/gazee.git /app/gazee && \
  pip3 install --no-cache-dir -U \
@@ -61,7 +63,9 @@ RUN \
 	/root/.cache \
 	/tmp/*
 
+# add local files
 COPY root/ /
 
-VOLUME /config /comics /mylar /certs
+# ports and volumes
 EXPOSE 4242
+VOLUME /certs /comics /config /mylar
