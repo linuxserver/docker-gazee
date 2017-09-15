@@ -77,7 +77,9 @@ Click the gear icon to go to the settings page.
 Change the default admin password or add a new admin and remove the admin user altogether.
 
 Comic path should be set to `/comics`
+
 *Optional* Mylar DB path should be set to `/mylar`
+
 *Optional* path for certificates and keys should be set to `/certs`
 
 After you update the settings, Gazee will restart and begin an intial scan of your comic library.
