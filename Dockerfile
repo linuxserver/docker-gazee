@@ -11,6 +11,7 @@ RUN \
  git clone --depth 1 https://github.com/hubbcaps/gazee.git /app/gazee && \
  pip install --no-cache-dir -U \
 	-r /app/gazee/requirements.txt && \
+
 # clean up
  rm -rf \
 	/root/.cache \
