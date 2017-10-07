@@ -9,6 +9,9 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 # install gazee
 RUN \
  git clone --depth 1 https://github.com/hubbcaps/gazee.git /app/gazee && \
+ sed -i \
+	's/==/>=/g' \
+	/app/gazee/requirements.txt && \
  pip install --no-cache-dir -U \
 	-r /app/gazee/requirements.txt && \
 
