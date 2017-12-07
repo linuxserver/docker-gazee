@@ -1,21 +1,20 @@
-FROM lsiobase/alpine.python3:3.6
-MAINTAINER sparklyballs
+FROM lsiobase/alpine.python3:3.7
 
 # set version label
 ARG BUILD_DATE
 ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+LABEL maintainer="sparklyballs"
 
-# install gazee
 RUN \
+ echo "**** install gazee ****" && \
  git clone --depth 1 https://github.com/hubbcaps/gazee.git /app/gazee && \
  sed -i \
 	's/==/>=/g' \
 	/app/gazee/requirements.txt && \
  pip install --no-cache-dir -U \
 	-r /app/gazee/requirements.txt && \
-
-# clean up
+ echo "**** clean up ****" && \
  rm -rf \
 	/root/.cache \
 	/tmp/*
