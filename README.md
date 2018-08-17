@@ -101,5 +101,6 @@ Happy Reading!
 
 ## Versions
 
++ **17.08.18:** Rebase to alpine 3.8.
 + **30.12.17:** Ensure version 11 of cherrypy.
 + **07.12.17:** Initial Release.
