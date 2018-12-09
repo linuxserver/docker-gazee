@@ -35,7 +35,7 @@ docker create \
 
 ## Parameters
 
-`The parameters are split into two halves, separated by a colon, the left hand side representing the host and the right the container side. 
+`The parameters are split into two halves, separated by a colon, the left hand side representing the host and the right the container side.
 For example with a port -p external:internal - what this shows is the port mapping from internal to external of the container.
 So -p 8080:80 would expose port 80 from inside the container to be accessible from the host's IP on port 8080
 http://192.168.x.x:8080 would show you what's running INSIDE the container on port 80.`
@@ -45,8 +45,8 @@ http://192.168.x.x:8080 would show you what's running INSIDE the container on po
 * `-p 4242` - the port(s)
 * `-v /config` - Where Gazee should store config files.
 * `-v /comics` - Path to comics folder.
-* `-v /mylar` - Path to Mylar DB 
-* `-v /certs` - Where SSL certs should be stored. 
+* `-v /mylar` - Path to Mylar DB
+* `-v /certs` - Where SSL certs should be stored.
 * `-e PGID` for GroupID - see below for explanation
 * `-e PUID` for UserID - see below for explanation
 
@@ -91,7 +91,7 @@ Happy Reading!
 * Shell access whilst the container is running: `docker exec -it gazee /bin/bash`
 * To monitor the logs of the container in realtime: `docker logs -f gazee`
 
-* container version number 
+* container version number
 
 `docker inspect -f '{{ index .Config.Labels "build_version" }}' gazee`
 
