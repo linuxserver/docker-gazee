@@ -4,7 +4,7 @@
 project_name: gazee
 project_url: "https://github.com/hubbcaps/gazee"
 project_logo: "https://raw.githubusercontent.com/hubbcaps/gazee/master/public/images/logos/red/logo-red-yellow.png"
-project_blurb: "[{{ project_name|capitalize }}]({{ project_url }}) is a WebApp Comic Reader for your favorite digital comics. Reach and read your comic library from any web connected device with a modern web browser."
+project_blurb: "THIS IMAGE IS DEPRECATED, IT WILL NO LONGER RECEIVE UPDATES. [{{ project_name|capitalize }}]({{ project_url }}) is a WebApp Comic Reader for your favorite digital comics. Reach and read your comic library from any web connected device with a modern web browser."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
 project_blurb_optional_extras_enabled: false
 
@@ -69,6 +69,7 @@ app_setup_block: |
 # changelog
 
 changelogs:
+  - { date: "27.03.19:", desc: "Deprecate image and get in semi working state." }
   - { date: "11.02.19:", desc: "Add pipeline logic and multi arch." }
   - { date: "17.08.18:", desc: "Rebase to alpine 3.8." }
   - { date: "30.12.17:", desc: "Ensure version 11 of cherrypy." }
