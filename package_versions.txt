@@ -42,7 +42,7 @@ scanelf-1.2.3-r0
 shadow-4.5-r0
 sqlite-libs-3.25.3-r0
 ssl_client-1.28.4-r3
-tzdata-2018f-r0
+tzdata-2018i-r0
 unrar-5.6.4-r0
 unzip-6.0-r4
 xz-5.2.4-r0
